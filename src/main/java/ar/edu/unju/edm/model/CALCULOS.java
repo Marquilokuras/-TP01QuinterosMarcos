@@ -31,21 +31,13 @@ public class CALCULOS {
       this.numero2 = numero2;
   }
 
-  public float ResolverPunto1() {
-      float Punto1=0;
-      if(numero1 == 0) {
-    	  return Punto1;
-      }else {
-    	  if(numero1 == 1) {
-        	  Punto1=numero1;
-    	  }else {
-    		  
-    		  for(int i=numero1-1;i==0;i--) {
-    			  numero1=numero1*i;
-    			  i--;
-    		  }   
-    	  }
-      }
+  public int ResolverPunto1() {
+      int Punto1=1;
+      
+      for( int i = 1; i <= numero1; i++ ) {
+          Punto1 *= i;
+       }
+  
      return Punto1;
   }
   
@@ -73,13 +65,20 @@ public class CALCULOS {
  }
 
   
-  public int ResolverPunto3() {
-      int Punto3 = 0;
-      
-     for(int i=0;i>numero1;i++) {
-    	
-     }
-     return Punto3;
+  public String ResolverPunto3() {
+      String Punto3 = "null";
+      for(int n=5;n==0;n--) {
+	      Scanner num = new Scanner(System.in);
+		  System.out.println("Ingrese una Numero Entero: ");
+		  int punto = num.nextInt();
+		  
+		  if(punto%2==0) {
+			  System.out.println("El Numero " + punto + " ingresado es Par");
+		  }else {
+			  System.out.println("El Numero " + punto + " ingresado es Impar");
+		  }
+      }
+     return Punto3 = "Operacion Finalizada";
   }
 
 }

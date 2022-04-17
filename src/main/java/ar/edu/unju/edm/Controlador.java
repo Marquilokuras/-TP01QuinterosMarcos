@@ -18,7 +18,7 @@ public class Controlador {
 	
 	@GetMapping("/calculoPunto1")
 	public String getPunto1Page(@RequestParam (name = "num1") int num1, Model model) {
-		float PuntoN1 = 0;
+		int PuntoN1 = 0;
 		CALCULOS nuevaPunto1 = new CALCULOS();
 		nuevaPunto1.setNumero1(num1);
 		nuevaPunto1.ResolverPunto1();
@@ -37,4 +37,13 @@ public class Controlador {
 		return "Punto2";
 	}
 	
+	@GetMapping("/calculoPunto3")
+	public String getPunto3Page(Model model) {
+		String PuntoN3 = "null";
+		CALCULOS nuevaPunto3 = new CALCULOS();
+		nuevaPunto3.ResolverPunto3();
+		PuntoN3 = nuevaPunto3.ResolverPunto3();
+		model.addAttribute("Punto3", PuntoN3);
+		return "Punto3";
+	}
 }
