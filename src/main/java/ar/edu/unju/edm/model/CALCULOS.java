@@ -64,39 +64,45 @@ public class CALCULOS {
      return Punto2;
  }
 
-  
-  public String ResolverPunto3() { //verlo mejor no anda repetitiva
+  public String ResolverPunto3() { 
 	  String Punto3 ="null";
-	  
-	  Scanner num = new Scanner(System.in);
-	  System.out.println("Ingrese una Numero Entero: ");
-	  int punto = num.nextInt();
-		  
-	  if(punto%2==0) {
-		  System.out.println("El Numero " + punto + " ingresado es Par");
-		  Punto3 = "El Numero ingresado es Par";
-	  }else {
-		  System.out.println("El Numero " + punto + " ingresado es Impar");
-		  Punto3 = "El Numero ingresado es Impar";
-	  }
-
+	  int cont = 0;
+	  do{
+		  Scanner num = new Scanner(System.in);
+		  System.out.println("Ingrese una Numero Entero: ");
+		  int punto = num.nextInt();
+			  
+		  if(punto%2==0) {
+			  System.out.println("El Numero " + punto + " ingresado es Par");
+			  Punto3 = "El Numero ingresado es Par";
+		  }else {
+			  System.out.println("El Numero " + punto + " ingresado es Impar");
+			  Punto3 = "El Numero ingresado es Impar";
+		  }
+		  cont++;
+		}while(cont<5);
 	return Punto3;  
   }
   
   
   public String ResolverPunto4() {
       String Punto4 = "null";
-      
-	      Scanner num = new Scanner(System.in);
+      boolean encontrado = true;
+      do {
+    	  Scanner num = new Scanner(System.in);
 		  System.out.println("Ingrese una Numero Entero: ");
 		  int punto = num.nextInt();
 		  
 		  if(punto>0 && punto<13) {
 			  System.out.println("El Numero " + punto + " corresponde a un mes");
+			  Punto4 = "El Numero " + punto + " corresponde a un mes"; 
 		  }else {
 			  System.out.println("El Numero " + punto + " No corresponde a un mes");
+			  Punto4 = "El Numero " + punto + " NO corresponde a un mes"; 
+			  encontrado = false;
 		  }
-		  
+      }while(encontrado != false);
+      
      return Punto4;
   }
 
@@ -145,7 +151,7 @@ public class CALCULOS {
 	  boolean sumar=true;
 	  //String cadena="Serie: ";
 	  int e=1;
-	  int n;
+	  int n = 0;
 	  int i=2;
 	  int j=40;
 	  int elementos [];
