@@ -1,5 +1,6 @@
 package ar.edu.unju.edm;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -73,5 +74,37 @@ public class Controlador {
 		model.addAttribute("Punto6", PuntoN6);
 		return "Punto6";
 	}
+	
+	@GetMapping("/calculoPunto7")
+	public String getPunto7Page(Model model) {
+		int PuntoN7 = 0;
+		CALCULOS nuevaPunto7 = new CALCULOS();
+		PuntoN7 = nuevaPunto7.ResolverPunto7();
+		model.addAttribute("Punto7", PuntoN7);
+		return "Punto7";
+	}
+	
+	@GetMapping("/calculoPunto8")
+	public String getPunto8Page(@RequestParam (name = "num1") int num1, Model model) {
+		String PuntoN8 = "";
+		CALCULOS nuevaPunto8 = new CALCULOS();
+		nuevaPunto8.setNumero1(num1);
+		nuevaPunto8.ResolverPunto8(num1);
+		PuntoN8 = nuevaPunto8.ResolverPunto8(num1);
+		model.addAttribute("Punto8", PuntoN8);
+		return "Punto8";
+	}
+	
+	@GetMapping("/calculoPunto1")
+	public String getPunto12Page(@RequestParam (name = "num1") int num1, Model model) {
+		int PuntoN12 = 0;
+		CALCULOS nuevaPunto12 = new CALCULOS();
+		nuevaPunto12.setNumero12(num1);
+		nuevaPunto12.ResolverPunto12();
+		PuntoN12 = nuevaPunto12.ResolverPunto12();
+		model.addAttribute("Punto12", PuntoN12);
+		return "Punto12";
+	}
+	
 	
 }

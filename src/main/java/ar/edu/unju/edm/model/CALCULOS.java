@@ -41,11 +41,10 @@ public class CALCULOS {
      return Punto1;
   }
   
-  
   public String ResolverPunto2() {
 	  
 	  Scanner lectura = new Scanner(System.in);
-	  System.out.println("Ingrese una fecha por teclado: ");
+	  System.out.println("Ingrese una año por teclado: ");
 	  int fecha = lectura.nextInt();
 
 	  System.out.println(fecha);
@@ -56,10 +55,10 @@ public class CALCULOS {
     	  if(fecha%100 != 0 || fecha%400 == 0) {
     		  return Punto2 = "Es un año Bisiesto";
     	  }else {
-    		  Punto2 = "No es un Anio Bisiesto"; 
+    		  Punto2 = "No es un Año Bisiesto"; 
     	  }
       }else {
-    	  Punto2 = "No es un Anio Bisiesto";
+    	  Punto2 = "No es un Año Bisiesto";
       }
      return Punto2;
  }
@@ -83,7 +82,6 @@ public class CALCULOS {
 		}while(cont<5);
 	return Punto3;  
   }
-  
   
   public String ResolverPunto4() {
       String Punto4 = "null";
@@ -216,4 +214,27 @@ public class CALCULOS {
 	  }
 	  return Punto7;
   }
+  
+  public String ResolverPunto8(int numero1) { //integer es un tipo de dato
+	  String Punto8 = "";
+	  int resultadoInteger = 1;
+	  int factorMultiplicador = 1;
+	  do {
+		  resultadoInteger = numero1 * factorMultiplicador;
+		  factorMultiplicador += 1;
+		  Punto8 = Punto8 + Integer.toString(resultadoInteger) + " - "; 
+	  }while((resultadoInteger + numero1)<100);
+	  
+	  return Punto8;
+  }
+  
+  public int ResolverPunto12() {
+      int Punto12=1;
+      
+      
+  
+     return Punto12;
+  } 
+  
+  
 }
