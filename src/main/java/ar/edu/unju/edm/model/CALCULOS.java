@@ -145,6 +145,42 @@ public class CALCULOS {
      return Punto5;
   }
  
+  public String ResolverPunto6() {
+      String Punto6 = "null";
+      boolean encontrado = true;
+      
+      while(encontrado == true) {
+    	  
+    	  Scanner num = new Scanner(System.in);
+    	  System.out.println("Ingrese una Numero Entero: ");
+		  int punto = num.nextInt();
+ 		  
+		  if(punto == 6) {
+			  System.out.println("Alumno regularizado"); 
+			  Punto6 = "Alumno regularizado";
+		  }else {
+			  if(punto >= 7 && punto <= 10) {
+				  System.out.println("El alumno promociona"); 
+				  Punto6 = "Alumno promociona";
+			  }else {
+				  if(punto < 6  && punto >= 1) {
+					  System.out.println("El alumno desaprueba"); 
+					  Punto6 = "Alumno desaprueba";
+				  }else {
+					  if(punto <= 0) {
+						  System.out.println("Valor no valido"); 
+						  Punto6 = "Valor no valido";
+						  encontrado = false;
+					  }
+				  }
+			  }
+		}
+		  
+      }
+      
+     return Punto6;
+  }
+  
   public int ResolverPunto7() { //falta terminar
 	  int Punto7=0;
 	  int serie = 1;

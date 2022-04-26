@@ -41,7 +41,6 @@ public class Controlador {
 	public String getPunto3Page(Model model) {
 		String PuntoN3 = "null";
 		CALCULOS nuevaPunto3 = new CALCULOS();
-		//nuevaPunto3.ResolverPunto3();
 		PuntoN3 = nuevaPunto3.ResolverPunto3();
 		model.addAttribute("Punto3", PuntoN3);
 		return "Punto3";
@@ -52,7 +51,6 @@ public class Controlador {
 	public String getPunto4Page(Model model) {
 		String PuntoN4 = "null";
 		CALCULOS nuevaPunto4 = new CALCULOS();
-		//nuevaPunto4.ResolverPunto4();
 		PuntoN4 = nuevaPunto4.ResolverPunto4();
 		model.addAttribute("Punto4", PuntoN4);
 		return "Punto4";
@@ -62,10 +60,18 @@ public class Controlador {
 	public String getPunto5Page(Model model) {
 		String PuntoN5 = "null";
 		CALCULOS nuevaPunto5 = new CALCULOS();
-		//nuevaPunto5.ResolverPunto5();
 		PuntoN5 = nuevaPunto5.ResolverPunto5();
 		model.addAttribute("Punto5", PuntoN5);
 		return "Punto5";
+	}
+	
+	@GetMapping("/calculoPunto6")
+	public String getPunto6Page(Model model) {
+		String PuntoN6 = "null";
+		CALCULOS nuevaPunto6 = new CALCULOS();
+		PuntoN6 = nuevaPunto6.ResolverPunto6();
+		model.addAttribute("Punto6", PuntoN6);
+		return "Punto6";
 	}
 	
 }
