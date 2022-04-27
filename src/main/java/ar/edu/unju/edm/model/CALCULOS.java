@@ -1,8 +1,8 @@
 package ar.edu.unju.edm.model;
 
 import java.util.Scanner;
-
 import org.springframework.stereotype.Component;
+import java.util.*;
 
 @Component
 
@@ -215,7 +215,7 @@ public class CALCULOS {
 	  return Punto7;
   }
   
-  public String ResolverPunto8(int numero1) { //integer es un tipo de dato
+  public String ResolverPunto8() { //integer es un tipo de dato
 	  String Punto8 = "";
 	  int resultadoInteger = 1;
 	  int factorMultiplicador = 1;
@@ -228,11 +228,21 @@ public class CALCULOS {
 	  return Punto8;
   }
   
-  public int ResolverPunto12() {
-      int Punto12=1;
+  public String ResolverPunto9() { //falta terminar
+      String Punto9 = "Ejercicio Terminado";
       
+      for(int i=320;i==160;i=i-20) {
+    	  System.out.println(i); 
+      }
       
+     return Punto9;
+  } 
   
+  public double ResolverPunto12() {
+      double Punto12;
+      double g = 9.81;
+      Punto12 = Math.sqrt((2 * numero1) / g );
+      
      return Punto12;
   } 
   

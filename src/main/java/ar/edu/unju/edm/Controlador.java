@@ -84,7 +84,7 @@ public class Controlador {
 		return "Punto7";
 	}
 	
-	@GetMapping("/calculoPunto8")
+/*	@GetMapping("/calculoPunto8")
 	public String getPunto8Page(@RequestParam (name = "num1") int num1, Model model) {
 		String PuntoN8 = "";
 		CALCULOS nuevaPunto8 = new CALCULOS();
@@ -93,13 +93,22 @@ public class Controlador {
 		PuntoN8 = nuevaPunto8.ResolverPunto8(num1);
 		model.addAttribute("Punto8", PuntoN8);
 		return "Punto8";
+	}*/
+	
+	@GetMapping("/calculoPunto9")
+	public String getPunto9Page(Model model) {
+		String PuntoN9 = "";
+		CALCULOS nuevaPunto9 = new CALCULOS();
+		PuntoN9 = nuevaPunto9.ResolverPunto9();
+		model.addAttribute("Punto9", PuntoN9);
+		return "Punto9";
 	}
 	
-	@GetMapping("/calculoPunto1")
+	@GetMapping("/calculoPunto12")
 	public String getPunto12Page(@RequestParam (name = "num1") int num1, Model model) {
-		int PuntoN12 = 0;
+		double PuntoN12 = 0;
 		CALCULOS nuevaPunto12 = new CALCULOS();
-		nuevaPunto12.setNumero12(num1);
+		nuevaPunto12.setNumero1(num1);
 		nuevaPunto12.ResolverPunto12();
 		PuntoN12 = nuevaPunto12.ResolverPunto12();
 		model.addAttribute("Punto12", PuntoN12);
