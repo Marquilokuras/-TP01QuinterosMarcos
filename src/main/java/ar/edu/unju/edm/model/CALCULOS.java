@@ -215,28 +215,59 @@ public class CALCULOS {
 	  return Punto7;
   }
   
-  public String ResolverPunto8() { //integer es un tipo de dato
+  public String ResolverPunto8() { 
 	  String Punto8 = "";
-	  int resultadoInteger = 1;
+	  int resultado = 1;
 	  int factorMultiplicador = 1;
+	  
 	  do {
-		  resultadoInteger = numero1 * factorMultiplicador;
+		  resultado = numero1 * factorMultiplicador;
 		  factorMultiplicador += 1;
-		  Punto8 = Punto8 + Integer.toString(resultadoInteger) + " - "; 
-	  }while((resultadoInteger + numero1)<100);
+		  Punto8 = Punto8 + resultado + " - "; 
+		  System.out.println(Punto8);
+	  }while((resultado + numero1)<=100);
 	  
 	  return Punto8;
   }
-  
-  public String ResolverPunto9() { //falta terminar
-      String Punto9 = "Ejercicio Terminado";
+    
+  public String ResolverPunto9() {  //terminar
+      String Punto9 = "";
       
       for(int i=320;i==160;i=i-20) {
-    	  System.out.println(i); 
+    	  Punto9 = Punto9 + i + " - ";
+    	  System.out.println(Punto9); 
       }
       
      return Punto9;
   } 
+  
+  public String ResolverPunto10() { //terminar
+	  String Punto10 = "";
+	  int resultado = 1;
+	  int factorMultiplicador = 1;
+	  
+	  do {
+		  resultado = numero1 * factorMultiplicador;
+		  factorMultiplicador += 1;
+		  Punto10 = Punto10 + resultado + " - "; 
+		  System.out.println(Punto10);
+	  }while((resultado + numero1)<=100);
+	  
+	  return Punto10;
+  }
+  
+  public String ResolverPunto11() { 
+	  String Punto11 = "";
+	  int valor = 320;
+	  
+	  do {
+		  Punto11 = Punto11 + valor + " - "; 
+		  System.out.println(Punto11);
+		  valor = valor - 20;
+	  }while(valor >= 160);
+	  
+	  return Punto11;
+  }
   
   public double ResolverPunto12() {
       double Punto12;
